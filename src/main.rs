@@ -39,7 +39,7 @@ fn main() -> Result<(), Box<dyn Error>> {
                 .short('u')
                 .long("url")
                 .value_name("URL")
-                .help("The URL to replace roblox.com with")
+                .help("The URL to replace nostro.lol with")
                 .required(true),
         )
         .arg(
@@ -82,7 +82,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     }
 
     let url_hex = hex::encode(url.as_bytes());
-    let roblox_hex = hex::encode("roblox.com");
+    let roblox_hex = hex::encode("nostro.lol");
     let start_time = Instant::now();
     let mut file_data = fs::read(file_path)?;
 
